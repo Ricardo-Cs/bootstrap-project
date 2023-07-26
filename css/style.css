@@ -1,0 +1,544 @@
+/* Imports */
+@import "./variables.css";
+
+/* Geral */
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    padding: 70px 0;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.row {
+    margin: 0;
+}
+
+p, li {
+    color: var(--color-2);
+    font-size: 14px;
+}
+
+/* NavBar */
+header, .navbar {
+    background-color: var(--color-2);
+}
+
+.navbar {
+    padding: .5rem 1.2rem;
+}
+.navbar-toggler-icon {
+    color: aliceblue;
+}
+
+#nav-container {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#logo {
+    width: 85px;
+}
+
+.navbar-brand {
+    padding: 0;
+}
+
+.navbar-brand:hover {
+    color: var(--color-9);
+}
+
+#navbar-links a {
+    color: var(--color-9);
+    cursor: pointer;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 1rem .8rem;
+}
+
+/* Slide Show */
+#mainSlider .carousel-inner, #mainSlider .carousel-item {
+    height: 90vh;
+}
+
+#mainSlider .carousel-caption {
+    top: 30%;
+}
+
+#mainSlider .carousel-caption h2 {
+    font-size: 50px;
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+#mainSlider .carousel-caption p {
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 60px;
+    color: var(--color-9);
+}
+
+.main-btn {
+    background-color: var(--color-5);
+    color: var(--color-9);
+    text-transform: uppercase;
+    width: 200px;
+    height: 60px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    border: 3px solid transparent;
+    transition: .5s;
+    font-family: 'Roboto', sans-serif;
+}
+
+.main-btn:hover {
+    background-color: transparent;
+    border: 3px solid var(--color-5);
+}
+
+.carousel-indicators .active {
+    background-color: var(--color-5);
+}
+
+/* Sobre a Empresa */
+#about-area {
+    background-color: var(--color-9);
+}
+
+.main-title {
+    text-align: center;
+    margin-bottom: 65px;
+    font-size: 40px;
+    color: var(--color-1);
+    font-weight: 400;
+    position: relative;
+}
+
+.main-title::after {
+    content: "";
+    border-top: 2px solid var(--color-2);
+    width: 15%;
+    position: absolute;
+    top: 60px;
+    left: 42.5%;
+}
+
+#about-title {
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+#about-list {
+    list-style: none;
+    padding: 0;
+}
+
+#about-list i {
+    color: var(--color-5);
+    margin-right: 15px;
+}
+
+#about-list li {
+    line-height: 30px;
+}
+
+/* Serviços da empresa */
+.service-box {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.service-box i, .service-box h4 {
+    transition: .4s;
+}
+
+.service-box:hover > i, .service-box:hover > h4 {
+    color: var(--color-5);
+}
+
+.service-box i {
+    color: var(--color-2);
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.service-box h4 {
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+/* Dados da empresa */
+.circle-box div {
+    padding: 0 40px;
+}
+  
+.progressbar-text {
+    font-weight: bold;
+    font-size: 32px;
+}
+  
+#data-area p {
+    color: var(--color-9);
+    text-align: center;
+    font-size: 26px;
+    margin-top: 20px;
+}
+
+/* Time */
+.card {
+    transition: .5s;
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+/* Trabalhe conosco */
+#apply-area .apply-box {
+    padding: 70px 50px;
+    text-align: center;
+    color: var(--color-9);
+}
+
+#apply-area .apply-box p {
+    color: var(--color-9);
+}   
+
+#apply-img {
+    background-image: url("../img/empresa.jpg");
+    background-size: cover;
+}
+
+#apply-btn {
+    background-color: transparent;
+    border-radius: 50px;
+    padding: 10px;
+    width: 180px;
+    border: 3px solid var(--color-9);
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 60px;
+    transition: .5s;
+}
+
+#apply-btn:hover {
+    background-color: var(--color-5);
+    border: 3px solid var(--color-5);
+}
+
+#pattern-img h4 {
+    margin-top: 8%;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+#pattern-img p {
+    margin-bottom: 20px;
+}
+
+/* Portfólio */
+.project-box {
+    margin-bottom: 30px;
+}
+
+#filter-btn-box {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+#portfolio-area .filter-btn {
+    color: var(--color-2);
+    border: 1px solid var(--color-2);
+    background-color: transparent;
+    text-transform: none;
+    margin: 0 15px;
+    min-width: 100px;
+    width: auto;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+}
+
+#portfolio-area .filter-btn.active, #portfolio-area .filter-btn:hover {
+    color: var(--color-9);
+    background-color: var(--color-5);
+    border-color: var(--color-5);
+}
+
+/* Orcamento */
+#store-area .container {
+    padding: 40px 100px;
+}
+
+#call-area, #store-area {
+    background-color: var(--color-3);
+    text-transform: uppercase;
+}
+
+#call-area .row, #store-area .row {
+    display: block;
+    text-align: center;
+}
+
+#call-area p, #store-area p {
+    color: var(--color-9);
+    font-weight: bold;
+    margin-bottom: 0;
+    height: 60px;
+    line-height: 60px;
+    letter-spacing: 2px;
+    display: inline;
+}
+
+#call-area p {
+    font-size: 20px;
+}
+
+#call-area #call-btn, #store-area #store-btn {
+    background-color: var(--color-9);
+    color: var(--color-5);
+    font-weight: bold;
+    margin-left: 20px;
+    width: 180px;
+    letter-spacing: 2px;
+    border-radius: 30px;
+    border: 2px solid transparent;  
+}
+
+#call-area #call-btn {
+    font-size: 20px;
+}
+
+#call-area #call-btn:hover, #store-area #store-btn:hover {
+    border: 2px solid var(--color-5);
+}
+/* Footer */
+#contact-area {
+    text-align: center;
+}
+
+.contact-box{
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+    border-bottom: 1px solid var(--color-5);
+}
+
+.contact-box i {
+    color: #444;
+    border: solid 1px var(--color-2);
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.contact-box p {
+    font-size: 16px;
+}
+
+.contact-title {
+    font-weight: bold;
+    color: var(--color-5);
+}
+
+#msg-box p {
+    font-size: 22px;
+}
+
+#contact-form input[type="text"],#contact-form input[type="email"], #contact-form textarea {
+    margin-bottom: 15px;
+    border-radius: 0;
+}
+
+#contact-form .main-btn {
+    width: 120px;
+    height: 50px;
+}
+
+#contact-form .main-btn:hover {
+    color: var(--color-5);
+}
+
+/* Store */
+#store-area .container {
+    padding: 10px 100px;
+}
+
+#store-area p {
+    font-size: 16px;
+}
+
+#store-area #store-btn {
+    font-size: 16px;
+    padding: 10px;
+}
+
+/* Copy */
+
+#copy-area {
+    background-color: var(--color-9);
+}
+
+#copy-area .container {
+    padding: 10px 0;
+    text-align: center;
+}
+
+#copy-area .container p {
+    margin-bottom: 0;
+}
+
+#copy-area .container a {
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-2);
+}
+
+#copy-area .container a:hover {
+    color: var(--color-5);
+}
+
+/* Responsividade */
+@media(max-width: 768px) {
+  
+    /* geral */
+    .container {
+      padding: 20px 0;
+    }
+    
+    /* slider */
+    #mainSlider .carousel-inner, #mainSlider .carousel-item {
+      height: auto;
+    }
+  
+    #mainSlider .carousel-caption h2 {
+      font-size: 28px;
+    }
+  
+    #mainSlider .carousel-caption p {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+  
+    .carousel-caption {
+      left: 10%;
+      right: 10%;
+    }
+    
+    /* Sobre */
+    #about-area img {
+      margin-top: 10px;
+    }
+
+    #about-title {
+        margin-top: 20px;
+    }
+    
+    /* data */
+    .circle-box div {
+      padding: 0 10px;
+    }
+  
+    #data-area p {
+      font-size: 16px;
+    }
+    
+    /* Time */
+    .card-title {
+      font-size: 14px;
+    }
+  
+    .card-text {
+      font-size: 12px;
+    }
+  
+    /* apply */
+    #apply-area .apply-box {
+      padding: 50px 25px;
+    }
+
+    #apply-img {
+        display: none;
+    }
+  }
+  
+  
+  @media(max-width: 425px) {
+  
+    /* slider */
+    #mainSlider {
+      margin-top: 90px;
+    }
+  
+    #mainSlider .carousel-caption {
+      top: 5%;
+    }
+  
+    #mainSlider .carousel-caption h2 {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+  
+    #mainSlider .carousel-caption p {
+      display: none;
+    }
+  
+    .carousel-caption .main-btn {
+      
+      font-size: 14px;
+    }
+  
+    /* Sobre */
+    .main-title {
+      font-size: 30px;
+    }
+  
+    #about-area img {
+      margin-top: 0;
+      margin-bottom: 30px;
+    }
+  
+    /* data */
+    .circle-box {
+      width: 50%;
+    }
+  
+    #team-area .col-md-3 {
+      width: 50%;
+      margin-bottom: 30px;
+    }
+  
+    /* apply */
+    #apply-area {
+      height: auto;
+    }
+  
+    #company-img {
+      display: none;
+    }
+  
+    /* filter */
+    #portfolio-area .filter-btn {
+      margin-bottom: 20px;
+    }
+  
+    .project-box {
+      width: 50%;
+    }
+  
+    /* contact */
+    .contact-box {
+      border: none;
+      margin-bottom: 0;
+    }
+  
+  }

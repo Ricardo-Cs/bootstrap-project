@@ -192,23 +192,47 @@ header, .navbar {
 }
 
 /* Time */
+#teamSlider {
+    padding: 0 2rem;
+}
+
 .card {
     transition: .5s;
+    margin: 0 .7rem;
 }
 
 .card:hover {
     transform: scale(1.03);
 }
 
+.img-wrapper {
+    max-width: 100%;
+    height: 65vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 /* Trabalhe conosco */
 #apply-area .apply-box {
-    padding: 70px 50px;
+    padding: 40px 50px;
     text-align: center;
     color: var(--color-9);
 }
 
+#apply-area .apply-box h4 {
+    font-size: 1.6rem;
+    margin-bottom: 25px;
+}
+
 #apply-area .apply-box p {
     color: var(--color-9);
+    font-size: 16px;
 }   
 
 #apply-img {
@@ -273,10 +297,6 @@ header, .navbar {
 }
 
 /* Orcamento */
-#store-area .container {
-    padding: 40px 100px;
-}
-
 #call-area, #store-area {
     background-color: var(--color-3);
     text-transform: uppercase;
@@ -451,8 +471,6 @@ header, .navbar {
     #data-area p {
       font-size: 16px;
     }
-    
-    /* Time */
     .card-title {
       font-size: 14px;
     }
@@ -471,12 +489,31 @@ header, .navbar {
     }
   }
   
-  
+  @media(min-width: 576px) {
+    #teamSlider .carousel-inner {
+        display: flex;
+        padding: 1.2rem;
+    }
+
+    #teamSlider .carousel-inner .carousel-item {
+        display: block;
+        margin-right: 0;
+        flex: 0 0 calc(100%/3);
+    }
+
+    .img-wrapper {
+        height: 25vw;
+    }
+  }
+
   @media(max-width: 425px) {
-  
+    /* Nav */
+    .navbar {
+        padding: 1.2rem 1rem;
+    }
     /* slider */
     #mainSlider {
-      margin-top: 90px;
+      margin-top: 85px;
     }
   
     #mainSlider .carousel-caption {
@@ -493,7 +530,6 @@ header, .navbar {
     }
   
     .carousel-caption .main-btn {
-      
       font-size: 14px;
     }
   
@@ -511,10 +547,10 @@ header, .navbar {
     .circle-box {
       width: 50%;
     }
-  
-    #team-area .col-md-3 {
-      width: 50%;
-      margin-bottom: 30px;
+
+    /* Team */
+    #teamSlider {
+        padding: 0 4rem;
     }
   
     /* apply */
@@ -539,6 +575,22 @@ header, .navbar {
     .contact-box {
       border: none;
       margin-bottom: 0;
+    }
+
+    /* Store  e orçamento */
+    #store-area .container {
+        padding: 10px;
+    }
+
+    #store-area p {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    #store-area #store-btn {
+        font-size: 12px;
+        padding: 3px;
+        margin-left: 5px;
     }
   
   }

@@ -193,12 +193,13 @@ header, .navbar {
 
 /* Time */
 #teamSlider {
-    padding: 0 2rem;
+    padding: 0 6rem;
 }
 
 .card {
     transition: .5s;
     margin: 0 .7rem;
+    box-shadow: 2px 6px 8px 0 rgba(22, 22, 26, .18);
 }
 
 .card:hover {

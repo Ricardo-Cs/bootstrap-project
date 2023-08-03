@@ -118,7 +118,7 @@ $(document).ready(function() {
     } else if(btnId == 'contact-menu') {
       scrollTo = contactSection;
     } else if (btnId == 'store-menu') {
-      scrollTo = storeSection
+      scrollTo = storeSection;
     } else {
       scrollTo = bannerSection;
     }
@@ -128,3 +128,33 @@ $(document).ready(function() {
     }, 300);
   });
 });
+
+// Slide show team
+const teamSlider = document.querySelector('#teamSlider');
+
+if(window.matchMedia("(min-width: 576px)").matches) {
+  const carousel = new bootstrap.Carousel(teamSlider, {
+    interval: false
+  });
+
+  let teamCarouselWidth = $('#teamSlider .carousel-inner')[0].scrollWidth;
+  let cardWidth = $('#teamSlider .carousel-inner .carousel-item').width();
+
+  let scrollPosition = 0;
+
+  $('#teamSlider .carousel-control-next').on('click', function() {
+    if (scrollPosition < (teamCarouselWidth - (cardWidth * 4))) {
+      scrollPosition = scrollPosition + cardWidth;
+      $('#teamSlider .carousel-inner').animate({scrollLeft: scrollPosition}, 600);
+    }
+  });
+
+  $('#teamSlider .carousel-control-prev').on('click', function() {
+    if (scrollPosition > 0) {
+      scrollPosition = scrollPosition - cardWidth;
+      $('#teamSlider .carousel-inner').animate({scrollLeft: scrollPosition}, 600);
+    }
+  });
+} else {
+  $(teamSlider).addClass('slide');
+}

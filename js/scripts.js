@@ -90,7 +90,8 @@ $(document).ready(function() {
     }
   }
 
-  let navBtn = $('.nav-item');
+  // Scroll
+  let navBtn = $('.nav-item .nav-link');
 
   let bannerSection = $('#mainSlider');
   let aboutSection = $('#about-area');
